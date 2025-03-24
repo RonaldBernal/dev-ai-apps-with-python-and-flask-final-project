@@ -18,15 +18,15 @@ def emo_detector():
 
     response = emotion_detector(text_to_analyse)
 
+    if response['dominant_emotion'] is None:
+        return "Invalid input ! Try again."
+
     anger = response['anger']
     disgust = response['disgust']
     fear = response['fear']
     joy = response['joy']
     sadness = response['sadness']
     dominant_emotion = response['dominant_emotion']
-
-    if dominant_emotion is None:
-        return "Invalid input ! Try again."
 
     return f"For the given statement, the system response is 'anger': \
 {anger}, 'disgust': {disgust}, 'fear': {fear}, 'joy': {joy} and 'sadness': {sadness}. \
