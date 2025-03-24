@@ -16,7 +16,7 @@ def emo_detector():
     '''
     text_to_analyse = request.args.get('textToAnalyze')
 
-    response = emo_detector(text_to_analyse)
+    response = emotion_detector(text_to_analyse)
 
     anger = response['anger']
     disgust = response['disgust']
