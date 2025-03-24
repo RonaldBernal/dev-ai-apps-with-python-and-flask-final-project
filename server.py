@@ -9,7 +9,7 @@ from EmotionDetection.emotion_detection import emotion_detector
 app = Flask("Emotion Detector")
 
 @app.route("/emotionDetector")
-def emo_detector(text_to_analyse):
+def emo_detector():
     ''' 
     Executing this function initiates the application of emotion
     detector
